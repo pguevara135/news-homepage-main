@@ -65,6 +65,11 @@ body {
     gap: 3rem;
 }
 
+.menu a:hover li {
+    cursor: pointer;
+    color: var(--soft-red);
+}
+
 .content {
     width: 100%;
     display: flex;
@@ -173,4 +178,9 @@ body {
     font-weight: 800;
     font-size: 1.2rem;
     padding: .8rem 0;
+}
+
+.description a:hover h4 {
+    cursor: pointer;
+    color: var(--soft-red);
 }

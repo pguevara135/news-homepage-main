@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | News homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="style.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -19,13 +20,18 @@
   <main class="container">
     <header class="header">
       <img src="assets/images/logo.svg" alt="" class="img_header">
-      <ul class="menu">
-        <a href="#"><li>Home</li></a>
-        <a href="#"><li>New</li></a>
-        <a href="#"><li>Popular</li></a>
-        <a href="#"><li>Trending</li></a>
-        <a href="#"><li>Categories</li></a>
-      </ul>
+      <span class="material-symbols-outlined" id="burguer">
+        menu
+      </span>
+      <menu>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">Categories</a></li>
+        </ul>
+      </menu>
     </header>
     <div class="content">
       
@@ -39,7 +45,8 @@
             <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people.
               But is it really fulfilling its promise?
             </p>
-            <a href="#" class="button">Read more</a>
+            <p><a href="#" class="button">Read more</a></p>
+            
           </div>
         </div>
       </section>
@@ -60,7 +67,7 @@
         <img src="assets/images/image-retro-pcs.jpg" alt="retro pc">
         <div class="description">
           <h5>01</h5>
-          <a href=""><h4>Reviving Retro PCs</h4></a>
+          <h4><a href="">Reviving Retro PCs</a></h4>
           <p>
             What happens when old PCs are given modern upgrades?
           </p>
@@ -70,7 +77,7 @@
         <img src="assets/images/image-top-laptops.jpg" alt="Laptops">
         <div class="description">
           <h5>02</h5>
-          <a href="#"><h4>Top 10 Laptops of 2022</h4></a>
+          <h4><a href="#">Top 10 Laptops of 2022</a></h4>
           <p>Our best picks for various needs and budgets.</p>
         </div>
       </div>
@@ -78,7 +85,7 @@
         <img src="assets/images/image-gaming-growth.jpg" alt="Gaming Growth">
         <div class="description">
           <h5>03</h5>
-          <a href=""><h4>The Growth of Gaming</h4></a>
+          <h4><a href="">The Growth of Gaming</a></h4>
           <p>How the pandemic has sparked fresh opportunities.</p>
         </div>
       </div>

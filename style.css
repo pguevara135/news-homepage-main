@@ -9,16 +9,14 @@
     --very-dark-blue: rgb(0, 0, 26);
 }
 
-/*? General Configuration */
-
-*, ul, li, a {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+}
+
+ul {
     list-style: none;
-    color: var(--dark-grayish-blue);
-    font-weight: 400;
 }
 
 img {
@@ -27,160 +25,227 @@ img {
 
 body {
     width: 100vw;
+    height: 100vh;
+    padding: 2rem;
     box-sizing: border-box;
-    font-family:  "Inter", sans-serif;
     font-size: 15px;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    background-color: var(--grayish-blue);
+    font-family: "Inter", sans-serif;
+    color: var(--dark-grayish-blue);
 }
-
-/*? Container Configuration */
 
 .container {
-    width: 1400px;
-    margin: 50px auto;
-    background-color: var(--off-white);
-    padding: 80px 130px;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-/* ? Header configuration */
+#burguer {
+    display: none;
+}
 
 .header {
-    width: 100%;
-    height: 50px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem;
+    justify-content: space-between;
 }
 
 .header img {
-    width: 80px;
+    width: 10%;
+    z-index: 0;
 }
 
 .menu {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
+    cursor: pointer;
 }
 
-.menu a:hover li {
-    cursor: pointer;
-    color: var(--soft-red);
+.menu a {
+    display: block;
+    padding: .5rem;
+    text-decoration: none;
+    text-align: center;
+    color: var(--dark-grayish-blue);
 }
 
 .content {
     width: 100%;
+    height: auto;
+    margin-top: 30px;
+    box-sizing: border-box;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    margin: 3rem auto;
 }
 
 .main {
-    width: 1350px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    width: 90%;
+    height: 100%;
 }
 
 .future {
+    width: 100%;
+    height: auto;
     display: flex;
-    gap: 2.7rem;
+    gap: 20px;
+    justify-content: space-around;
 }
 
 .title {
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 3.5rem;
-}
-
-.title h1 {
+    width: 50%;
+    height: 100%;
+    font-size: 1.9rem;
     color: var(--very-dark-blue);
-    font-weight: 800;
-    font-size: 3.5rem;
+    
 }
 
 .evolution {
-    padding-right: 1rem;
-    color: var(--dark-grayish-blue);
-    line-height: 1.6rem;
-    position: relative;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.evolution p:nth-child(1) {
+    margin-bottom: 52px;
 }
 
 .button {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     background-color: var(--soft-red);
+    text-decoration: none;
     color: var(--off-white);
-    padding: .7rem 2rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
+    padding: 10px 50px;
+    letter-spacing: 3px;
 }
 
 .lateral {
+    height: auto;
     background-color: var(--very-dark-blue);
-    color: var(--grayish-blue);
-    padding: 1.5rem 1rem;
+    padding: 20px 20px 0 20px;
 }
 
 .lateral h2 {
     color: var(--soft-orange);
-    font-size: 2.3rem;
+    margin-bottom: 15px;
 }
 
-.news p {
-    color: var(--grayish-blue);
-    padding-right: 2rem;
-}
-
-.news h3 {
-    padding: 1.5rem 0 1rem;
-    font-size: 1.3rem;
-    font-weight: 700;
+.lateral h3 {
     color: var(--off-white);
+    margin: 20px auto;
 }
 
 .traco {
-    width: 100%;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid var(--dark-grayish-blue);
+    border-bottom: 2px solid var(--dark-grayish-blue);
+    padding-bottom: 15px;
 }
 
 .footer {
-    width: 100%;
-    margin-top: 2rem;
     display: flex;
-    justify-content: space-around;
+    gap: 20px;
+}
+
+.footer img {
+    width: 100px;
 }
 
 .flex {
-    width: 350px;
     display: flex;
+    gap: 20px;
 }
 
-.flex img {
-    width: 100px;
-    margin-right: 1.5rem;
-}
-
-.description h5 {
-    font-size: 2rem;
-    color: var(--grayish-blue);
+.description {
     font-weight: 700;
-    display: inline-block;
 }
 
-.description h4 {
+h5 {
+    font-size: 30px;
+    color: var(--grayish-blue);
+}
+
+h4 {
+    margin: 10px 0;
+}
+
+h4 a {
+    text-decoration: none;
     color: var(--very-dark-blue);
-    font-weight: 800;
-    font-size: 1.2rem;
-    padding: .8rem 0;
+    cursor: pointer;
 }
 
-.description a:hover h4 {
-    cursor: pointer;
+a:hover {
     color: var(--soft-red);
+}
+
+/* ! SCREEN CONFIGUATION */
+
+@media screen and (max-width: 650px) {
+    body {
+        padding: 0;
+    }
+
+    .header {
+        position: relative;
+    }
+
+
+    #burguer {
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+    #nuvem {
+        background-color: rgba(0, 0, 0, 0.507);
+    }
+
+    .menu {
+        display: none;
+        width: 50%;
+        height: 100vh;
+        padding-top: 3rem;
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: -1rem;
+        right: -1rem;
+        background-color: var(--off-white);
+    }
+
+    .menu a {
+        text-align: left;
+        color: var(--dark-grayish-blue);
+        font-weight: 800;
+        padding: 1rem;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .future {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .title {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .evolution {
+        width: 100%;
+    }
+
+    .button {
+        display: block;
+        width: 40%;
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
 }

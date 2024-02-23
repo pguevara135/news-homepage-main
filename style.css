@@ -45,6 +45,10 @@ body {
     display: none;
 }
 
+#burguerFechar {
+    display: none;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -57,6 +61,7 @@ body {
 }
 
 .menu {
+    display: block;
     display: flex;
     gap: 2rem;
     cursor: pointer;
@@ -177,31 +182,27 @@ a:hover {
     color: var(--soft-red);
 }
 
-/* ! SCREEN CONFIGUATION */
+/* ! MEDIA SCREEN CONFIGURATION */
 
 @media screen and (max-width: 650px) {
     body {
         padding: 0;
     }
-
+    
     .header {
-        position: relative;
+        margin-top: 10px;
     }
 
 
     #burguer {
         display: block;
         position: absolute;
-        right: 0;
-    }
-
-    #nuvem {
-        background-color: rgba(0, 0, 0, 0.507);
+        right: 10px;
     }
 
     .menu {
         display: none;
-        width: 50%;
+        width: 70%;
         height: 100vh;
         padding-top: 3rem;
         flex-direction: column;
@@ -212,11 +213,22 @@ a:hover {
         background-color: var(--off-white);
     }
 
+    #burguerFechar {
+        display: none;
+        position: absolute;
+        right: 0;
+        z-index: 10;
+    }
+
     .menu a {
         text-align: left;
         color: var(--dark-grayish-blue);
         font-weight: 800;
         padding: 1rem;
+    }
+
+    .main {
+        width: 100%;
     }
 
     .content {
@@ -239,13 +251,18 @@ a:hover {
 
     .button {
         display: block;
-        width: 40%;
+        width: 60%;
         position: relative;
         margin-top: 15px;
+        z-index: 0;
     }
 
     .footer {
         flex-direction: column;
         padding-bottom: 20px;
+    }
+
+    .filter {
+        background-color: rgba(0, 0, 0, 0.404);
     }
 }
